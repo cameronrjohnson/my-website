@@ -7,10 +7,15 @@ const config = {
 
 	kit: {
 		adapter: adapter({
+			// default options are shown
+			pages: 'build',
+			assets: 'build',
 			fallback: '404.html'
 		}),
+
 		paths: {
-			base: process.argv.includes('dev') ? 'Cameron-Website' : process.env.BASE_PATH
+			// Set the base path only if it's defined in the environment variables
+			base: process.env.NODE_ENV === 'development' ? '' : process.env.BASE_PATH || ''
 		}
 	}
 };
