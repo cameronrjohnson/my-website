@@ -6,10 +6,7 @@ const config = {
 	preprocess: vitePreprocess(),
 
 	kit: {
-		adapter: adapter({
-			// default options are shown
-			fallback: '404.html'
-		}),
+		adapter: adapter(),
 
 		paths: {
 			// Set the base path only if it's defined in the environment variables
