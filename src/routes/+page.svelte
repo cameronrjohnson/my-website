@@ -1,5 +1,7 @@
-<h1>Welcome to SvelteKit, this is new!</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
-<body>
-    This is a body
-</body>
+<nav>
+	<a href="/">home</a>
+	<a href="/about">about</a>
+</nav>
+
+<h1>home</h1>
+<p>this is the home page.</p>
