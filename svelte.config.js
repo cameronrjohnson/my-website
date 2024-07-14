@@ -6,13 +6,16 @@ const config = {
 	preprocess: vitePreprocess(),
 
 	kit: {
-		adapter: adapter(),
-
+		adapter: adapter({
+			pages: 'build',
+			assets: 'build',
+			fallback: '404.html'
+		}),
 		paths: {
-			// Set the base path only if it's defined in the environment variables
-			base: process.env.NODE_ENV === 'development' ? '' : process.env.BASE_PATH || ''
+			base: process.env.NODE_ENV === 'development' ? '' : '/Cameron-Website'
 		}
 	}
 };
 
 export default config;
+
