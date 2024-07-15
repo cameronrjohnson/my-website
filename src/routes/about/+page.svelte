@@ -8,5 +8,5 @@
 	<a href="{base}/about">home</a>
 </nav>
 
-<h1>home</h1>
-<p>this is the home page.</p>
+<h1>about</h1>
+<p>this is the about page.</p>
