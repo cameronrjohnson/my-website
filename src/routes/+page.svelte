@@ -5,7 +5,7 @@
 
 <nav>
 	<a href="{base}/">home</a>
-	<a href="{base}/about">home</a>
+	<a href="{base}/about">about</a>
 </nav>
 
 <h1>home</h1>
