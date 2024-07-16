@@ -1,2 +1,7 @@
-<h1>home</h1>
-<p>this is the home page test.</p>
+<script>
+      import Header from '../components/Header.svelte'; // Adjust the path as needed
+</script>
+
+<Header />
+
+

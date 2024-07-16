@@ -1,53 +1,10 @@
-<script lang="ts">
-    import { base } from '$app/paths';
+<script>
+    import {base} from '$app/paths';
     import { onMount, onDestroy } from 'svelte';
-
-let images: string[] = [
-    '/images/test-image.jpeg',
-    '/images/test-image(1).jpeg',
-    '/images/test-image(2).jpeg'
-];
-let currentIndex: number = 0;
-
-function handleMouseMove(event: MouseEvent) {
-    const slideshow = document.querySelector('.background-slideshow') as HTMLElement;
-    if (!slideshow) return;
-
-    const { clientX, clientY } = event;
-    const mouseX = (clientX / window.innerWidth) * 100;
-    const mouseY = (clientY / window.innerHeight) * 100;
-
-    slideshow.style.backgroundPosition = `${mouseX}% ${mouseY}%`;
-}
-
-function changeBackgroundImage() {
-    const slideshow = document.querySelector('.background-slideshow');
-    if (!slideshow) return;
-
-    slideshow.innerHTML = images.map((img, index) => 
-        `<img src="${img}" class="${index === currentIndex ? 'active' : ''}">`
-    ).join('');
-    
-    currentIndex = (currentIndex + 1) % images.length;
-}
-
-onMount(() => {
-    changeBackgroundImage();
-    setInterval(changeBackgroundImage, 5000);
-
-    window.addEventListener('mousemove', handleMouseMove);
-});
-
-onDestroy(() => {
-    window.removeEventListener('mousemove', handleMouseMove);
-});
-
-// Cleanup event listener on component unmount
-onDestroy(() => {
-    window.removeEventListener('mousemove', handleMouseMove);
-
-});
 </script>
+  
+  
+<!-- Your HTML structure continues here -->
 
 <head>
     <meta charset="UTF-8">
