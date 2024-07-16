@@ -6,40 +6,61 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="color-scheme" content="dark light" />
 		%sveltekit.head%
-
 		<style>
-
-body {
-    font-family: Arial, sans-serif;
+			
+			body, html {
     margin: 0;
     padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+    overflow: hidden;
+    background-color: #ccc; /* Set grey background color */
 }
 
 .container {
     width: 80%;
     margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 header {
-    background-color: #333;
+    background-color: rgba(0, 0, 0, 0.7);
     color: white;
     padding: 20px 0;
     margin-bottom: 0;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.branding {
+    display: flex;
+    align-items: center;
+}
+
+.branding img.profile-pic {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
 }
 
 header h1 {
     margin: 0;
-    font-size: 2.5em;
+    font-size: 2em;
 }
 
 header nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    display: flex;
 }
 
 header nav ul li {
-    display: inline;
     margin-right: 20px;
 }
 
@@ -58,7 +79,9 @@ footer {
     color: white;
     padding: 20px 0;
     text-align: center;
-    margin-top: 40px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
 footer p {
@@ -80,6 +103,38 @@ footer .social-media a:hover {
     text-decoration: underline;
 }
 
+#main-content {
+    padding-top: 80px; /* Adjust according to header height */
+    padding-bottom: 40px; /* Adjust according to footer height */
+    text-align: center;
+    color: white;
+    font-size: 2em;
+}
+
+.background-slideshow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+    background-color: #ccc; /* Set grey background color */
+}
+
+.background-slideshow img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0; /* Initially hide all images */
+    transition: opacity 0.3s ease-in-out;
+}
+
+.background-slideshow img.active {
+    opacity: 1; /* Show active image */
+}
+
 			body {
 				--bg-1: hsl(0, 0%, 100%);
 				--bg-2: hsl(206, 20%, 90%);
@@ -99,8 +154,11 @@ footer .social-media a:hover {
 				color: var(--fg-1);
 				font-family: var(--font);
 				line-height: 1.5;
-				/* margin: 1rem; */
+				margin: 1rem;
 				height: calc(100vh - 2rem);
+				font-family: Arial, sans-serif;
+				margin: 0;
+				padding: 0;
 			}
 
 			h1,
