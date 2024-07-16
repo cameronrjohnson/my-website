@@ -1,6 +1,5 @@
 <script>
     import {base} from '$app/paths';
-    import { onMount, onDestroy } from 'svelte';
 </script>
   
   
@@ -13,7 +12,7 @@
 <header>
     <div class="container">
         <div class="branding">
-            <img src="/images/newface.jpeg" alt="Cameron Johnson" class="profile-pic">
+            <img src="{base}/images/newface.jpeg" alt="Cameron Johnson" class="profile-pic">
             <h1>Cameron Johnson</h1>
         </div>
         <nav>
