@@ -87,9 +87,6 @@
       margin-bottom: 1rem;
     }
   
-    .notification {
-      margin-top: 1rem;
-    }
   </style>
   
   <div class="container">
