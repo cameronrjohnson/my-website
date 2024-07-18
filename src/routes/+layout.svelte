@@ -10,13 +10,7 @@
     padding: 0;
     background-color: #262730; /* Ensure white background above and below header/footer */
   }
-
-  .layout-container {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Ensure full viewport height */
-  }
-
+  
   main {
     flex: 1;
     background: linear-gradient(45deg, #262730, #D33F49, #EFF0D1); /* Gradient background */
@@ -41,7 +35,7 @@
   }
 </style>
 
-<div class="layout-container">
+<div>
   <Header />
   <main>
     <slot />
