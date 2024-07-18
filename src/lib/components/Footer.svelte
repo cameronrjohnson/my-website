@@ -8,7 +8,7 @@
     }
   
     footer {
-      background-color: darkslategray;
+      background-color: #262730;
       color: white;
       padding: 20px 0;
       text-align: center;

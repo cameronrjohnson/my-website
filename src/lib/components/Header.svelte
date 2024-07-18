@@ -3,6 +3,8 @@
 </script>
 
 <style>
+
+
   .container {
       width: 80%;
       margin: 0 auto;
@@ -12,7 +14,7 @@
   }
 
   header {
-      background-color: darkslategrey;
+      background-color: #262730;
       color: white;
       padding: 20px 0;
       width: 100%;
@@ -57,21 +59,23 @@
   }
 
 </style>
+<html lang="en">
+    <header>
+        <div class="container">
+            <div class="branding">
+                <img src="{base}/images/newface.jpeg" alt="Cameron Johnson" class="profile-pic">
+                <a href="{base}/">
+                    <h1>Cameron Johnson</h1>
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="{base}/about">My Story</a></li>
+                    <li><a href="{base}/portfolio">Experience</a></li>
+                    <li><a href="{base}/contact">Lets Chat!</a></li>
+                </ul>
+            </nav>
+        </div>
+      </header>
+</html>
 
-<header>
-  <div class="container">
-      <div class="branding">
-          <img src="{base}/images/newface.jpeg" alt="Cameron Johnson" class="profile-pic">
-          <a href="{base}/">
-              <h1>Cameron Johnson</h1>
-          </a>
-      </div>
-      <nav>
-          <ul>
-              <li><a href="{base}/about">About</a></li>
-              <li><a href="{base}/portfolio">Resume</a></li>
-              <li><a href="{base}/contact">Contact</a></li>
-          </ul>
-      </nav>
-  </div>
-</header>

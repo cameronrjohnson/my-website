@@ -13,7 +13,7 @@
       }
     
       .content {
-        background-color: white;
+        background-color: #EFF0D1;
         padding: 2rem;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         border-radius: 8px;
@@ -38,7 +38,7 @@
     
     <div class="container">
       <div class="content">
-        <h1>Hi, I am an aspiring software engineer!</h1>
+        <h1>Hi, I am an aspiring software develper!</h1>
         <slot>
             <p class="head">Feel free to look around my website.</p>
         </slot>

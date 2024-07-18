@@ -62,7 +62,7 @@
     }
   
     .content {
-      background-color: white;
+      background-color: #EFF0D1;
       padding: 2rem;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       border-radius: 8px;
@@ -86,13 +86,12 @@
     .form-group {
       margin-bottom: 1rem;
     }
-  
   </style>
   
   <div class="container">
     <div class="content">
-      <h1>Contact Us</h1>
-      <p class="head">Enter the details to get in touch with us. You can remove your email at any time after this.</p>
+      <h1>Send Me An Email</h1>
+      <p class="head">Please enter your info and message below and I will try to get back to you asap.</p>
   
       {#if apiResult !== null}
         {#if apiResult === true}
