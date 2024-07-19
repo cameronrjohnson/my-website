@@ -1,8 +1,7 @@
-<!-- src/lib/components/timeline.svelte -->
 <script lang="ts">
     import { writable } from "svelte/store";
 
-    export let events: { title: string; message: string; image: string; date: string}[] = [];
+    export let events: { title: string; message: string; image: string; date: string }[] = [];
 
     const currentEventIndex = writable(0);
 
@@ -12,6 +11,10 @@
 
     function prevEvent() {
         currentEventIndex.update((index) => (index > 0 ? index - 1 : 0));
+    }
+
+    function setEvent(index: number) {
+        currentEventIndex.set(index);
     }
 
     $: currentEvent = events[$currentEventIndex];
@@ -27,7 +30,7 @@
         display: flex;
         flex-direction: row;
         justify-content: center;
-        align-items: center; 
+        align-items: center;
         padding: 20px;
         position: relative;
     }
@@ -40,7 +43,7 @@
         background-color: #EFF0D1;
         position: relative;
         box-sizing: border-box;
-        margin-bottom: 20px; 
+        margin-bottom: 20px;
     }
 
     .image-container img {
@@ -51,13 +54,13 @@
 
     .vertical_dotted_line {
         max-height: 50%;
-        content:"";
+        content: "";
         position: absolute;
         z-index: -1;
         top: 0;
         bottom: 0;
         left: 49%;
-        border-left: 5px dotted #262730; 
+        border-left: 5px dotted #262730;
         margin: auto;
     }
 
@@ -67,7 +70,7 @@
         padding: 50px;
         box-sizing: border-box;
         display: flex;
-        flex-direction: column; 
+        flex-direction: column;
         justify-content: space-between; /* Space items evenly */
         align-items: center;
         position: relative;
@@ -85,6 +88,13 @@
         border-radius: 6px;
         position: relative;
         flex: 1; /* Ensure items grow to fill space */
+        cursor: pointer;
+        border: none;
+    }
+
+    .timeline-item:focus {
+        outline: 2px solid #ffffff;
+        outline-offset: 2px;
     }
 
     .content h3 {
@@ -130,7 +140,7 @@
             <div class="event-details">
                 <h3>{currentEvent.title}</h3>
                 <p>{currentEvent.message}</p>
-                <p class="date"> {currentEvent.date}</p>
+                <p class="date">{currentEvent.date}</p>
             </div>
         {/if}
     </div>
@@ -141,13 +151,12 @@
         </button>
         <div class="vertical_dotted_line"></div>
         {#each events as event, index}
-            <div class="timeline-item" data-index={index}>
+            <button class="timeline-item" on:click={() => setEvent(index)} aria-label={`Event ${index + 1}: ${event.title}`}>
                 <div class="content">
                     <h3>{event.title}</h3>
                 </div>
-            </div>
+            </button>
         {/each}
-        
         <button class="btn" on:click={nextEvent} disabled={$currentEventIndex === events.length - 1}>
             <i class="fas fa-chevron-down"></i>
         </button>

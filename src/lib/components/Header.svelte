@@ -72,7 +72,7 @@
                   <ul>
                       <li><a href="{base}/about">My Story</a></li>
                       <li><a href="{base}/portfolio">Experience</a></li>
-                      <li><a href="{base}/contact">Lets Chat!</a></li>
+                      <li><a href="{base}/contact">Contact Me</a></li>
                   </ul>
               </nav>
           </div>

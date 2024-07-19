@@ -58,6 +58,7 @@
       justify-content: center;
       align-items: center;
       height: 80vh;
+      padding: 20px;
       background-color: hsl(0, 0, 30%);
     }
   
@@ -72,19 +73,31 @@
     }
   
     .head {
-      color: black;
       list-style: none;
       text-decoration: none;
       font-size: 1.2em;
     }
   
-    /* Additional styles for form components */
     .form-container {
       margin-top: 2rem;
     }
   
     .form-group {
       margin-bottom: 1rem;
+    }
+
+    .submit-button {
+      padding: 10px 20px;
+        color: black;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .submit-button:hover {
+      background-color: #262730;
+      color: white;
     }
   </style>
   
@@ -124,7 +137,7 @@
           <div class="form-group">
             <TextArea labelText="Message" name="message" typeof="textarea" on:change={handleChange} bind:value={$form.message} invalid={$errors.message.length > 0} invalidText={$errors.message}/>
           </div>
-          <Button type="submit" disabled={$isSubmitting}>Submit</Button>
+          <button class="submit-button" type="submit" disabled={$isSubmitting}>Submit</button>
         </Form>
       </div>
   
