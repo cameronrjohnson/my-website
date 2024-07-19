@@ -8,20 +8,26 @@
   :global(html, body) {
     margin: 0;
     padding: 0;
-    background-color: #262730; /* Ensure white background above and below header/footer */
-  }
-  
-  main {
-    flex: 1;
-    background: linear-gradient(45deg, #262730, #D33F49, #EFF0D1); /* Gradient background */
-    background-size: 600%; /* Adjust background size as needed */
-    display: flex; /* Enable flexbox for main content */
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
-    text-align: center; /* Align text content center */
+    background-color: #262730; /* Dark background for the whole page */
+    font-family: Arial, sans-serif; /* Default font for consistency */
   }
 
-  /* Adjust gradient animation */
+  div {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+  }
+
+  main {
+    animation: gradient 15s ease infinite;
+    background: linear-gradient(45deg, #262730, #8b292f);
+    background-size: 300%; /* Adjust as needed for smoother animation */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
   @keyframes gradient {
     0% {
       background-position: 0% 50%;

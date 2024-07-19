@@ -97,6 +97,11 @@
         outline-offset: 2px;
     }
 
+    .highlight {
+        outline: 2px solid #ffffff;
+        outline-offset: 2px;
+    }
+
     .content h3 {
         margin-top: 0;
     }
@@ -151,7 +156,7 @@
         </button>
         <div class="vertical_dotted_line"></div>
         {#each events as event, index}
-            <button class="timeline-item" on:click={() => setEvent(index)} aria-label={`Event ${index + 1}: ${event.title}`}>
+            <button class="timeline-item {index === $currentEventIndex ? 'highlight' : ''}" on:click={() => setEvent(index)} aria-label={`Event ${index + 1}: ${event.title}`}>
                 <div class="content">
                     <h3>{event.title}</h3>
                 </div>
