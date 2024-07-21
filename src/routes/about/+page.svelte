@@ -7,39 +7,39 @@
   const events = [
     {
       title: 'Begining',
-      message: 'This is the first event. This is the secondThis is the secondThis is the secondThis is the secondThis is the secondThis is the second',
-      image: `${base}/images/test-image.jpeg`,
-      date: 'Jan 2021 - Feb 2022'
+      message: 'Resolution Prototyping',
+      image: `${base}/images/timeline-photos/Part_Square.jpeg`,
+      date: 'Jan. 2019 - Feb. 2020'
     },
     {
       title: 'Mobile Dev.',
-      message: 'This is the second event.This is the secondThis is the secondThis is the second',
-      image: `${base}/images/test-image(1).jpeg`,
-      date: ''
+      message: 'Benaswap',
+      image: `${base}/images/timeline-photos/Flutter_Square.jpeg`,
+      date: 'Feb. 2020 - Aug. 2020'
     },
     {
       title: 'Game Dev.',
-      message: 'This is the third event.This is the secondThis is the secondThis is the secondThis is the secondThis is the secondThis is the second',
-      image: `${base}/images/test-image(2).jpeg`,
-      date: ''
+      message: 'Photo about video games',
+      image: `${base}/images/timeline-photos/Unity_Square.jpeg`,
+      date: 'Aug. 2020 - Nov. 2021'
     },
     {
       title: 'Mission',
-      message: 'This is the third event.',
-      image: `${base}/images/test-image.jpeg`,
-      date: ''
+      message: 'Stuff about my mission',
+      image: `${base}/images/timeline-photos/Mission_Square.JPG`,
+      date: 'Nov. 2021 - Nov. 2023'
     },
     {
       title: 'College',
-      message: 'This is the third event.',
-      image: `${base}/images/test-image(1).jpeg`,
-      date: ''
+      message: 'Stuff about my college.',
+      image: `${base}/images/timeline-photos/Idaho_Square.jpeg`,
+      date: 'Jan. 2024 - Current'
     },
     {
       title: 'Current',
-      message: 'This is the third event.',
-      image: `${base}/images/test-image(2).jpeg`,
-      date: ''
+      message: 'Photo about finding a job.',
+      image: `${base}/images/timeline-photos/Clean_Square.jpeg`,
+      date: 'Current'
     }
   ];
 </script>

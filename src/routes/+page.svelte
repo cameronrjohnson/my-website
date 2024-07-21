@@ -38,7 +38,7 @@
     
     <div class="container">
       <div class="content">
-        <h1>Hi, I am an aspiring software develper!</h1>
+        <h1>Hi, I am an aspiring software developer!</h1>
         <slot>
             <p class="head">Feel free to look around my website.</p>
         </slot>

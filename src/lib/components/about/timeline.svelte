@@ -136,6 +136,12 @@
         right: 0;
         padding: 20px;
     }
+
+    .message {
+        text-align: left;
+        padding-top: 10px;
+    }
+    
 </style>
 
 <div bind:this={timelineContainer} class="timeline-container">
@@ -144,7 +150,7 @@
             <img src={currentEvent.image} alt="" />
             <div class="event-details">
                 <h3>{currentEvent.title}</h3>
-                <p>{currentEvent.message}</p>
+                <p class="message">{currentEvent.message}</p>
                 <p class="date">{currentEvent.date}</p>
             </div>
         {/if}

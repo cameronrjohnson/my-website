@@ -1,4 +1,3 @@
-<!-- src/lib/Slideshow.svelte -->
 <script lang="ts">
     import { onMount } from 'svelte';
     import { writable } from 'svelte/store';
@@ -17,7 +16,7 @@
 
     let interval: ReturnType<typeof setInterval>;
     onMount(() => {
-        interval = setInterval(nextImage, 3000); // Change image every 3 seconds
+        interval = setInterval(nextImage, 10000); // Change image every 10 seconds
         return () => clearInterval(interval);
     });
 </script>
@@ -25,23 +24,29 @@
 <style>
     .slideshow {
         position: relative;
+        display: flex;
+        height: 30vh;
+        width: 30vw;  
     }
 
     .slideshow img {
-        height: 200px;
-        width: 200px;
+        height: 30vh;
+        width: 30vh;
         border-radius: 6px;
+        position: absolute;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
     }
 
-
-
+    .slideshow img.active {
+        opacity: 1;
+    }
 </style>
 
 <div class="slideshow">
     {#if images.length > 0}
         {#each images as image, index (image)}
-            <img src={image} alt="" style:display={$currentImageIndex === index ? 'block' : 'none'} />
+            <img src={image} alt="" class={$currentImageIndex === index ? 'active' : ''} />
         {/each}
     {/if}
-
 </div>

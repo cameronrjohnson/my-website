@@ -32,7 +32,7 @@
     color: black;
     list-style: none;
     text-decoration: none;
-    font-size: small;
+    font-size: medium;
   }
 
   .image-container {
@@ -74,8 +74,8 @@
 <div class="container">
   <div class="content image-container">
     <h2> Resume </h2>
-    <a href="{base}/images/test-image.jpeg" download="Cameron-Johnson-Resume">
-      <img src="{base}/images/test-image.jpeg" alt="Cameron-Johnson-Resume">
+    <a href="{base}/images/Cameron Johnson Resume.pdf" download="Cameron-Johnson-Resume">
+      <img src="{base}/images/Cameron_Resume.jpg" alt="Cameron-Johnson-Resume">
     </a>
   </div>
 
@@ -97,7 +97,7 @@
       <h2 class="body">- Game Development -</h2>
       <ul>
         <li>Unity</li>
-        <li>Unreal Engine</li>  
+        <li>Unreal Engine</li>
       </ul>
       <h2 class="body">- Other -</h2>
       <ul>
