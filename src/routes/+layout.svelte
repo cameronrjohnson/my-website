@@ -4,40 +4,31 @@
   import Footer from '../lib/components/Footer.svelte';
 </script>
 
+
 <style>
   :global(html, body) {
     margin: 0;
     padding: 0;
-    background-color: #262730; /* Dark background for the whole page */
+    height: 100%; /* Ensure the body takes up the full viewport height */
+    width: 100%;  /* Ensure the body takes up the full viewport width */
     font-family: Arial, sans-serif; /* Default font for consistency */
+    background: #262730; /* Base background color */
   }
 
   div {
     display: grid;
     grid-template-rows: auto 1fr auto;
-    min-height: 100vh;
+    min-height: 100vh; /* Ensures the grid takes up the full viewport height */
   }
 
   main {
-    animation: gradient 15s ease infinite;
-    background: linear-gradient(45deg, #262730, #8b292f);
-    background-size: 300%; /* Adjust as needed for smoother animation */
+    background: #262730; /* Gradient for the main content area */
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-  }
-
-  @keyframes gradient {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
+    width: 100%; /* Ensure the main area spans the full width */
+    height: 100%; /* Ensure the main area spans the full height */
   }
 </style>
 

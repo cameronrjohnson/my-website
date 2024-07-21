@@ -18,22 +18,20 @@
   .container {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 80px;
-    position: relative;
+    justify-content: center; 
+    align-items: center;  
+    width: 100%;              
+    max-width: 1200px;
   }
 
   .content {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center; 
     background-color: #EFF0D1;
     padding: 2rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    margin-right: 2rem; /* Add space between text and slideshow */
     text-align: left;
   }
 

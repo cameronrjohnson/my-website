@@ -23,6 +23,7 @@
 
 <style>
     .slideshow {
+        padding: 5%;
         position: relative;
         display: flex;
         height: 30vh;
