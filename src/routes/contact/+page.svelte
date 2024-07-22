@@ -63,7 +63,6 @@
       justify-content: center;
       align-items: center;
       height: 50vh;
-      background-color: hsl(0, 0%, 30%);
   }
 
   .content {
