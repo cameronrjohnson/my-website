@@ -10,7 +10,6 @@
     `${base}/images/me-photos/Kids_Square.jpeg`,
     `${base}/images/me-photos/Snow_Square.jpeg`,
     `${base}/images/me-photos/Family_Square.jpeg`,
-    `${base}/images/me-photos/Dog_Square.jpeg`,
   ];
 </script>
 
@@ -29,7 +28,7 @@
     flex-direction: column;
     justify-content: center; 
     background-color: #EFF0D1;
-    padding: 50px;
+    padding: 30px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     text-align: left;

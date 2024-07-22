@@ -47,8 +47,8 @@
     }
 
     .image-container img {
-        height: 60vh;
-        width: 60vh;
+        height: 50vh;
+        width: 50vh;
         border-radius: 6px;
     }
 
@@ -60,7 +60,7 @@
         top: 0;
         bottom: 0;
         left: 49%;
-        border-left: 5px dotted #262730;
+        border-left: 5px dotted #3d3f4e;
         margin: auto;
     }
 
@@ -83,7 +83,7 @@
         color: white;
         padding: 10px;
         margin: 10px 0; /* Adjust margin */
-        background-color: #262730; /* Darker background color */
+        background-color: #3d3f4e; /* Darker background color */
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         border-radius: 6px;
         position: relative;
@@ -116,7 +116,7 @@
     }
 
     .btn:hover {
-        background-color: #262730;
+        background-color: #3d3f4e;
     }
 
     .btn i {
@@ -125,8 +125,8 @@
 
     .event-details {
         padding: 20px;
-        max-width: 10vw;
-        min-width: 10vw;
+        max-width: 300px;
+        min-width: 300px;
     }
 
     .date {
