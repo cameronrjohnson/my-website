@@ -36,12 +36,12 @@
             <div class="flex flex-col h-full">
                 <div class="flex-grow mb-4 md:mb-10">
                     {#if events.length > 0}
-                        <h3 class="text-lg md:text-xl font-bold absolute top-5 left-4 md:bottom-6 md:left-6">{currentEvent.title}</h3>
+                        <h3 class="text-lg md:text-xl font-bold absolute top-2 left-3 md:top-3 md:left-4">{currentEvent.title}</h3>
                         <p class="text-sm md:text-base mt-2 p-4 text-left">{currentEvent.message}</p>
                     {/if}
                 </div>
                 <!-- Date Container -->
-                <div class="absolute bottom-6 right-4 md:bottom-6 md:right-6">
+                <div class="absolute bottom-2 right-3 md:bottom-3 md:right-4">
                     {#if events.length > 0}
                         <p class="text-xs md:text-sm text-black p">{currentEvent.date}</p>
                     {/if}
