@@ -28,7 +28,7 @@
         <!-- Image Container -->
         <div class="flex-shrink-0 w-full md:w-80">
             {#if events.length > 0}
-                <img src={currentEvent.image} alt="" class="w-full h-48 md:h-80 object-cover rounded-md" />
+                <img src={currentEvent.image} alt="" class="w-full  md:h-80 object-cover rounded-md" />
             {/if}
         </div>
         <!-- Text Container -->
