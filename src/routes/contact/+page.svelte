@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { supabase } from "../../supabaseCliet";
+    import { supabase } from "../../supabaseCliet"; // Corrected import
     import { createForm } from "svelte-forms-lib";
     import * as yup from "yup";
     import { TextInput, TextArea, Form } from "carbon-components-svelte";
@@ -57,7 +57,7 @@
     }
 </script>
   
-<div class="flex items-center justify-center h-[50vh] bg-gray-800 p-5">
+<div class="flex items-center justify-center h-[50vh] p-5">
     <div class="bg-yellow-100 p-8 shadow-md rounded-xl max-w-3xl w-full text-center">
         <h1 class="text-3xl font-bold text-black mb-4">Send Me An Email</h1>
         <p class="text-lg text-black mb-4">Please enter a message below and I will try to get back to you ASAP.</p>
@@ -73,10 +73,11 @@
                                 name="name" 
                                 on:change={handleChange} 
                                 bind:value={$form.name} 
-                                invalid={$errors.name.length > 0} 
-                                invalidText={$errors.name} 
-                                class="w-full bg-yellow-100 border border-black rounded-md py-2 px-3 text-gray-700"
+                                class="w-full bg-yellow-100 border border-black rounded-md py-2 px-3 text-gray-700 text-black"
                             />
+                            {#if $errors.name}
+                                <div class="text-black text-sm mt-1">{$errors.name}</div> <!-- Custom error message -->
+                            {/if}
                         </div>
                     </div>
                     <div class="w-full sm:w-1/2">
@@ -88,10 +89,11 @@
                                 type="email" 
                                 on:change={handleChange} 
                                 bind:value={$form.email} 
-                                invalid={$errors.email.length > 0} 
-                                invalidText={$errors.email} 
                                 class="w-full bg-yellow-100 border border-black rounded-md py-2 px-3 text-gray-700"
                             />
+                            {#if $errors.email}
+                                <div class="text-black text-sm mt-1">{$errors.email}</div> <!-- Custom error message -->
+                            {/if}
                         </div>
                     </div>
                 </div>
@@ -103,10 +105,11 @@
                             name="message" 
                             on:change={handleChange} 
                             bind:value={$form.message} 
-                            invalid={$errors.message.length > 0} 
-                            invalidText={$errors.message} 
                             class="w-full bg-yellow-100 border border-black rounded-md py-2 px-3 text-gray-700"
                         />
+                        {#if $errors.message}
+                            <div class="text-black text-sm mt-1">{$errors.message}</div> <!-- Custom error message -->
+                        {/if}
                     </div>
                 </div>
                 <button 

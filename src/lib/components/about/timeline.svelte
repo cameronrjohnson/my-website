@@ -24,26 +24,26 @@
 
 <div class="flex flex-col p-5">
     <!-- Text and Image Column Container -->
-    <div class="flex flex-row items-start space-x-6">
+    <div class="flex flex-col md:flex-row items-start space-y-6 md:space-x-6 md:space-y-0">
         <!-- Image Container -->
-        <div class="flex-shrink-0">
+        <div class="flex-shrink-0 w-full md:w-80">
             {#if events.length > 0}
-                <img src={currentEvent.image} alt="" class="h-80 w-80 object-cover rounded-md" />
+                <img src={currentEvent.image} alt="" class="w-full h-48 md:h-80 object-cover rounded-md" />
             {/if}
         </div>
         <!-- Text Container -->
-        <div class="relative bg-yellow-100 p-6 rounded-lg shadow-md text-black flex-1 h-80 w-80 object-cover">
+        <div class="relative bg-yellow-100 p-4 md:p-6 rounded-lg shadow-md text-black flex-1 md:w-80 h-auto md:h-80">
             <div class="flex flex-col h-full">
-                <div class="flex-grow mb-10">
+                <div class="flex-grow mb-4 md:mb-10">
                     {#if events.length > 0}
-                        <h3 class="text-xl font-bold">{currentEvent.title}</h3>
-                        <p class="text-base mt-2">{currentEvent.message}</p>
+                        <h3 class="text-lg md:text-xl font-bold">{currentEvent.title}</h3>
+                        <p class="text-sm md:text-base mt-2">{currentEvent.message}</p>
                     {/if}
                 </div>
                 <!-- Date Container -->
-                <div class="absolute bottom-6 right-6">
+                <div class="absolute bottom-4 right-4 md:bottom-6 md:right-6">
                     {#if events.length > 0}
-                        <p class="text-sm text-gray-600">{currentEvent.date}</p>
+                        <p class="text-xs md:text-sm text-gray-600">{currentEvent.date}</p>
                     {/if}
                 </div>
             </div>
@@ -52,11 +52,33 @@
 
     <!-- Timeline Container -->
     <div class="flex flex-col items-center mt-6 space-y-4">
-        <!-- Timeline Buttons -->
-        <div class="flex items-center space-x-4">
+        <!-- Timeline Buttons for Mobile -->
+        <div class="flex flex-row md:hidden items-center">
             <!-- Previous Button -->
             <button 
-                class="bg-yellow-100 text-black p-3 rounded-full hover:bg-yellow-200 transition-colors duration-300 disabled:bg-gray-400" 
+                class="bg-yellow-100 text-black p-8 rounded-md hover:bg-yellow-200 transition-colors duration-300 disabled:bg-gray-400 text-5xl" 
+                on:click={prevEvent} 
+                disabled={$currentEventIndex === 0}
+            >
+                &lt;
+            </button>
+            <gap class="p-3"></gap>
+
+            <!-- Next Button -->
+            <button 
+                class="bg-yellow-100 text-black p-8 rounded-md hover:bg-yellow-200 transition-colors duration-300 disabled:bg-gray-400 text-5xl" 
+                on:click={nextEvent} 
+                disabled={$currentEventIndex === events.length - 1}
+            >
+                &gt;
+            </button>
+        </div>
+
+        <!-- Timeline Buttons for Desktop -->
+        <div class="hidden md:flex items-center space-x-4">
+            <!-- Previous Button -->
+            <button 
+                class="bg-yellow-100 text-black p-3 rounded-md hover:bg-yellow-200 transition-colors duration-300 disabled:bg-gray-400" 
                 on:click={prevEvent} 
                 disabled={$currentEventIndex === 0}
             >
@@ -78,7 +100,7 @@
 
             <!-- Next Button -->
             <button 
-                class="bg-yellow-100 text-black p-3 rounded-full hover:bg-yellow-200 transition-colors duration-300 disabled:bg-gray-400" 
+                class="bg-yellow-100 text-black p-3 rounded-md hover:bg-yellow-200 transition-colors duration-300 disabled:bg-gray-400" 
                 on:click={nextEvent} 
                 disabled={$currentEventIndex === events.length - 1}
             >
