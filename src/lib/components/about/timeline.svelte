@@ -28,7 +28,7 @@
         <!-- Image Container -->
         <div class="flex-shrink-0 w-full md:w-80">
             {#if events.length > 0}
-                <img src={currentEvent.image} alt="" class="w-full  md:h-80 object-cover rounded-md" />
+                <img src={currentEvent.image} alt="" class="w-full md:h-80 object-cover rounded-md" />
             {/if}
         </div>
         <!-- Text Container -->
@@ -89,7 +89,7 @@
             <div class="flex flex-row items-center space-x-2">
                 {#each events as event, index}
                     <button 
-                        class={`w-32 p-2 text-left bg-yellow-100 text-black rounded-md shadow-md ${index === $currentEventIndex ? 'outline outline-2 outline-white' : ''}`} 
+                        class={`w-32 p-2 text-left bg-yellow-100 text-black rounded-md shadow-md ${index === $currentEventIndex ? 'outline outline-1 outline-white' : ''}`} 
                         on:click={() => setEvent(index)} 
                         aria-label={`Event ${index + 1}: ${event.title}`}
                     >
