@@ -5,7 +5,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%sveltekit.assets%/images/newface.jpeg" />
+    <link rel="icon" href="/static/images/newface.jpeg" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="color-scheme" content="dark light" />
     <!-- Tailwind CSS CDN (if not using a build process) -->

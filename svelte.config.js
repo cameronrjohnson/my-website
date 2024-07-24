@@ -7,10 +7,6 @@ const config = {
   preprocess: sveltePreprocess({
     postcss: true
   }),
-  assets: {
-    // Ensure this matches your actual assets directory
-    directory: 'static'
-  },
   kit: {
     adapter: adapter({
       fallback: '404.html'
