@@ -16,38 +16,19 @@
 
     let interval: ReturnType<typeof setInterval>;
     onMount(() => {
-        interval = setInterval(nextImage, 10000); // Change image every 10 seconds
+        interval = setInterval(nextImage, 10000);
         return () => clearInterval(interval);
     });
 </script>
 
-<style>
-    .slideshow {
-        padding: 5%;
-        position: relative;
-        display: flex;
-        height: 30vh;
-        width: 30vw;  
-    }
-
-    .slideshow img {
-        height: 30vh;
-        width: 30vh;
-        border-radius: 6px;
-        position: absolute;
-        opacity: 0;
-        transition: opacity 1s ease-in-out;
-    }
-
-    .slideshow img.active {
-        opacity: 1;
-    }
-</style>
-
-<div class="slideshow">
+<div class="relative flex items-center justify-center p-4 h-60 w-60">
     {#if images.length > 0}
         {#each images as image, index (image)}
-            <img src={image} alt="" class={$currentImageIndex === index ? 'active' : ''} />
+            <img 
+                src={image} 
+                alt="" 
+                class={`absolute inset-0 object-cover rounded-md transition-opacity duration-1000 ease-in-out ${$currentImageIndex === index ? 'opacity-100' : 'opacity-0'}`} 
+            />
         {/each}
     {/if}
 </div>

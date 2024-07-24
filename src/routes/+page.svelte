@@ -1,44 +1,36 @@
-<!-- src/lib/CentralContainer.svelte -->
 <script lang="ts">
   import { base } from '$app/paths';
+  import Slideshow from '../lib/components/slideshow.svelte';
+
+  // Sample images for the slideshow
+  const images = [
+    `${base}/images/me-photos/Fish_Square.jpeg`,
+    `${base}/images/me-photos/Family_Square.jpeg`,
+    `${base}/images/me-photos/Kids_Square.jpeg`,
+    `${base}/images/me-photos/Snow_Square.jpeg`,
+    `${base}/images/me-photos/Grad_Square.JPG`,
+  ];
+
 </script>
 
-<style>
-  .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80vh;
-    background-color: hsl(0, 0, 30%);
-  }
+<div class="flex items-center justify-between w-full p-8">
+  <div class="flex-1 text-left mr-8">
+    <div class="bg-yellow-100 p-8 shadow-lg rounded-lg text-left max-w-4xl mx-auto flex flex-row">
+      
+      <div class="flex flex-col p-5">
+        <h1 class="text-2xl font-bold mb-4 text-black">A Little About Me</h1>
 
-  .content {
-    background-color: #EFF0D1;
-    padding: 2rem;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    max-width: 800px;
-    width: 100%;
-    text-align: center;
-  }
-
-  h1 {
-    margin-bottom: 1rem;
-  }
-
-  .head {
-    color: black;
-    list-style: none;
-    text-decoration: none;
-    font-size: 1.2em;
-  }
-</style>
-
-<div class="container">
-  <div class="content">
-    <h1>Hi, I am an aspiring software developer!</h1>
-    <slot>
-      <p class="head">Feel free to look around my website.</p>
-    </slot>
+        <p class="text-base text-black">
+          Hi, I am Cameron. I am a college student at BYU-Idaho studying computer science and aspire to be an honest software developer. 
+          When I am not programming or doing homework you can usually find me fishing or snowboarding if it's too cold.
+          I also really like playing Elden Ring and Counter-Strike with my friends while hanging out with my dog.
+        </p>
+      </div>
+      <div class="flex-shrink-0">
+        <Slideshow {images} />
+      </div>
+    </div>
+    
   </div>
+
 </div>

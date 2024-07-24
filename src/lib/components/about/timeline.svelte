@@ -18,158 +18,72 @@
     }
 
     $: currentEvent = events[$currentEventIndex];
+</script> 
 
-    let timelineContainer: HTMLElement | null = null;
-</script>
-
-<!-- Link to Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-<style>
-    .timeline-container {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        padding: 20px;
-        position: relative;
-    }
-
-    .image-container {
-        border-radius: 8px;
-        display: flex;
-        flex-direction: row;
-        padding: 20px;
-        background-color: #EFF0D1;
-        position: relative;
-        box-sizing: border-box;
-        margin-bottom: 20px;
-    }
-
-    .image-container img {
-        height: 50vh;
-        width: 50vh;
-        border-radius: 6px;
-    }
-
-    .vertical_dotted_line {
-        max-height: 50%;
-        content: "";
-        position: absolute;
-        z-index: -1;
-        top: 0;
-        bottom: 0;
-        left: 49%;
-        border-left: 5px dotted #3d3f4e;
-        margin: auto;
-    }
-
-    .timeline {
-        flex: 1;
-        overflow-x: auto;
-        padding: 50px;
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between; /* Space items evenly */
-        align-items: center;
-        position: relative;
-        z-index: 1; /* Ensure timeline items are above the dotted line */
-    }
-
-    .timeline-item {
-        min-width: 100%;
-        min-height: 25%;
-        color: white;
-        padding: 10px;
-        margin: 10px 0; /* Adjust margin */
-        background-color: #3d3f4e; /* Darker background color */
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        border-radius: 6px;
-        position: relative;
-        flex: 1; /* Ensure items grow to fill space */
-        cursor: pointer;
-        border: none;
-    }
-
-    .timeline-item:focus {
-        outline: 2px solid #ffffff;
-        outline-offset: 2px;
-    }
-
-    .highlight {
-        outline: 2px solid #ffffff;
-        outline-offset: 2px;
-    }
-
-    .content h3 {
-        margin-top: 0;
-    }
-
-    .btn {
-        padding: 10px 20px;
-        color: white;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        transition: background-color 0.3s;
-    }
-
-    .btn:hover {
-        background-color: #3d3f4e;
-    }
-
-    .btn i {
-        font-size: 24px;
-    }
-
-    .event-details {
-        padding: 20px;
-        max-width: 300px;
-        min-width: 300px;
-    }
-
-    .date {
-        font-size: x-small;
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        padding: 20px;
-    }
-
-    .message {
-        text-align: left;
-        padding-top: 10px;
-    }
-    
-</style>
-
-<div bind:this={timelineContainer} class="timeline-container">
-    <div class="image-container">
-        {#if events.length > 0}
-            <img src={currentEvent.image} alt="" />
-            <div class="event-details">
-                <h3>{currentEvent.title}</h3>
-                <p class="message">{currentEvent.message}</p>
-                <p class="date">{currentEvent.date}</p>
+<div class="flex flex-col p-5">
+    <!-- Text and Image Column Container -->
+    <div class="flex flex-row items-start space-x-6">
+        <!-- Image Container -->
+        <div class="flex-shrink-0">
+            {#if events.length > 0}
+                <img src={currentEvent.image} alt="" class="h-80 w-80 object-cover rounded-md" />
+            {/if}
+        </div>
+        <!-- Text Container -->
+        <div class="relative bg-yellow-100 p-6 rounded-lg shadow-md text-black flex-1 h-80 w-80 object-cover">
+            <div class="flex flex-col h-full">
+                <div class="flex-grow mb-10">
+                    {#if events.length > 0}
+                        <h3 class="text-xl font-bold">{currentEvent.title}</h3>
+                        <p class="text-base mt-2">{currentEvent.message}</p>
+                    {/if}
+                </div>
+                <!-- Date Container -->
+                <div class="absolute bottom-6 right-6">
+                    {#if events.length > 0}
+                        <p class="text-sm text-gray-600">{currentEvent.date}</p>
+                    {/if}
+                </div>
             </div>
-        {/if}
+        </div>
     </div>
 
-    <div class="timeline">
-        <button class="btn" on:click={prevEvent} disabled={$currentEventIndex === 0}>
-            <i class="fas fa-chevron-up"></i>
-        </button>
-        <div class="vertical_dotted_line"></div>
-        {#each events as event, index}
-            <button class="timeline-item {index === $currentEventIndex ? 'highlight' : ''}" on:click={() => setEvent(index)} aria-label={`Event ${index + 1}: ${event.title}`}>
-                <div class="content">
-                    <h3>{event.title}</h3>
-                </div>
+    <!-- Timeline Container -->
+    <div class="flex flex-col items-center mt-6 space-y-4">
+        <!-- Timeline Buttons -->
+        <div class="flex items-center space-x-4">
+            <!-- Previous Button -->
+            <button 
+                class="bg-yellow-100 text-black p-3 rounded-full hover:bg-yellow-200 transition-colors duration-300 disabled:bg-gray-400" 
+                on:click={prevEvent} 
+                disabled={$currentEventIndex === 0}
+            >
+                &lt;
             </button>
-        {/each}
-        <button class="btn" on:click={nextEvent} disabled={$currentEventIndex === events.length - 1}>
-            <i class="fas fa-chevron-down"></i>
-        </button>
+
+            <!-- Timeline Buttons -->
+            <div class="flex flex-row items-center space-x-2">
+                {#each events as event, index}
+                    <button 
+                        class={`w-32 p-2 text-left bg-yellow-100 text-black rounded-md shadow-md ${index === $currentEventIndex ? 'outline outline-2 outline-white' : ''}`} 
+                        on:click={() => setEvent(index)} 
+                        aria-label={`Event ${index + 1}: ${event.title}`}
+                    >
+                        <h3 class="text-lg text-center">{event.title}</h3>
+                    </button>
+                {/each}
+            </div>
+
+            <!-- Next Button -->
+            <button 
+                class="bg-yellow-100 text-black p-3 rounded-full hover:bg-yellow-200 transition-colors duration-300 disabled:bg-gray-400" 
+                on:click={nextEvent} 
+                disabled={$currentEventIndex === events.length - 1}
+            >
+                &gt;
+            </button>
+        </div>
     </div>
 </div>

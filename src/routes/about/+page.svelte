@@ -1,6 +1,5 @@
 <script lang="ts">
   import Timeline from '$lib/components/about/timeline.svelte';
-  import AboutMe from '$lib/components/about/aboutMeHeader.svelte';
   import { base } from '$app/paths';
 
   const events = [
@@ -10,7 +9,7 @@
                 I built the website with WordPress and even a little bit of JavaScript along the way. 
                 The company was a massive success, but very quickly after the launch, I became hooked on programming 
                 as a whole and wanted to know everything there is to know about it. 
-                The company site is still up to this day, and I am still very proud of it.`,
+                The company is still running to this day.`,
       image: `${base}/images/timeline-photos/Res_Square.jpeg`,
       date: 'Jan. 2019 - Feb. 2020'
     },
@@ -62,22 +61,6 @@
   ];
 </script>
 
-<style>
-  .main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .about {
-    padding: 30px;
-  }
-</style>
-
-<div class="main">
-  <div class="about">
-    <AboutMe />
-  </div>
+<div class="flex flex-col items-center justify-center p-5 box-border h-[80vh] w-full">
   <Timeline {events} />
 </div>

@@ -1,112 +1,46 @@
-<!-- src/lib/CentralContainer.svelte -->
 <script lang="ts">
   import { base } from '$app/paths';
 </script>
 
-<style>
-  .container {
-    gap: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80vh;
-    width: 100%;
-    background-color: hsl(0, 0, 30%);
-    padding: 20px;
-    box-sizing: border-box;
-  }
-
-  .content {
-    background-color: #EFF0D1;
-    padding: 30px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 12px;
-    width: 30%;
-    height: 75%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-
-
-  h1, h2 {
-    margin-bottom: 1rem;
-    color: black;
-    text-align: center;
-  }
-
-  .body {
-    font-size: 1rem;
-    color: black;
-  }
-
-  .image-container img {
-    max-width: 100%;
-    max-height: 50vh;
-    object-fit: contain;
-    border-radius: 8px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .image-container img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  }
-
-  .list {
-    text-align: left;
-    width: 100%;
-  }
-
-  .list ul {
-    padding: 0;
-    margin: 0;
-  }
-
-  .list li {
-    padding: 5px 0;
-    font-size: 1rem;
-    color: black;
-  }
-</style>
-
-<div class="container">
-  <div class="content">
-    <div class="image-container">
-      <h2>Resume</h2>
+<div class="flex gap-10 justify-center items-center w-full p-5 box-border">
+  <!-- Resume Container -->
+  <div class="p-12 shadow-md rounded-xl flex flex-col justify-between items-center transition-transform duration-300 ease-in-out hover:shadow-lg hover:scale-105 max-w-md w-full h-[80vh] flex-1">
+    <div class="text-center flex flex-col items-center h-full">
       <a href="{base}/images/Cameron Johnson Resume.pdf" download="Cameron-Johnson-Resume">
-        <img src="{base}/images/Cameron_Resume.jpg" alt="Cameron Johnson Resume">
+        <img 
+          src="{base}/images/Cameron_Resume.jpg" 
+          alt="Cameron Johnson Resume" 
+          class="object-contain rounded-lg transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-lg max-w-[70%] max-h-[60%]" 
+        />
       </a>
     </div>
   </div>
 
-  <div class="content">
-    <div class="list">
-      <h1 class="header">Here are a few of my skills</h1>
+  <!-- Skills Container -->
+  <div class="bg-yellow-100 p-5 shadow-md rounded-xl flex flex-col justify-between items-center max-w-md w-full flex-1 max-h-10px">
+    <div class="text-left">
+      <h1 class="text-3xl font-bold text-black mb-4">Here are a few of my skills</h1>
 
-      <h2 class="body">- Mobile Development -</h2>
-      <ul>
+      <h2 class="text-xl font-semibold text-black mb-2">- Mobile Development -</h2>
+      <ul class="list-disc list-inside pl-4 text-black mb-4">
         <li>Dart, Swift, Java</li>
         <li>Flutter, Flame, Bonfire</li>
       </ul>
 
-      <h2 class="body">- Web Development -</h2>
-      <ul>
-        <li>HTML, CSS, JavaScript</li>
+      <h2 class="text-xl font-semibold text-black mb-2">- Web Development -</h2>
+      <ul class="list-disc list-inside pl-4 text-black mb-4">
+        <li>Tailwind, JavaScript, Sveltekit</li>
         <li>WordPress, Google Ads</li>
       </ul>
 
-      <h2 class="body">- Game Development -</h2>
-      <ul>
+      <h2 class="text-xl font-semibold text-black mb-2">- Game Development -</h2>
+      <ul class="list-disc list-inside pl-4 text-black mb-4">
         <li>C#, Unity, Blender</li>
       </ul>
 
-      <h2 class="body">- Other -</h2>
-      <ul>
-        <li>Firebase, Supabase, Git</li>
+      <h2 class="text-xl font-semibold text-black mb-2">- Other -</h2>
+      <ul class="list-disc list-inside pl-4 text-black">
+        <li>Python, Firebase, Supabase, Git</li>
       </ul>
     </div>
   </div>
