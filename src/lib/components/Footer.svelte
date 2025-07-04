@@ -1,7 +1,7 @@
 <footer class="text-white py-5 w-full">
   <div class="container mx-auto flex flex-col md:flex-row justify-between items-center px-5">
     <!-- Copyright Text -->
-    <p class="text-base mb-4 md:mb-0 hidden md:flex">&copy; 2024 Cameron Johnson. All Rights Reserved.</p>
+    <p class="text-base mb-4 md:mb-0 hidden md:flex">&copy; 2025 Cameron Johnson. All Rights Reserved.</p>
     
     <!-- Social Links -->
     <div class="flex space-x-3">

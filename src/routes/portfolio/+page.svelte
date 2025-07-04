@@ -6,10 +6,10 @@
   <!-- Resume Container -->
   <div class="p-6 md:p-12 rounded-xl flex flex-col justify-between items-center transition-transform duration-300 ease-in-out  hover:scale-105 max-w-md w-full h-[60vh] md:h-[80vh] flex-1">
     <div class="text-center flex flex-col items-center h-full">
-      <a href="{base}/images/Cameron-Johnson-Resume.pdf" download="Cameron-Johnson-Resume">
+      <a href="{base}/images/Cameron_Johnson_Resume.pdf" download="Cameron_Johnson_Resume">
         <img 
-          src="{base}/images/Cameron_Resume.jpg" 
-          alt="Cameron-Johnson-Resume" 
+          src="{base}/images/Cameron_Johnson_Resume.jpg" 
+          alt="Cameron_Johnson_Resume" 
           class="object-contain rounded-lg transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-lg max-w-[80%] max-h-[60%]" 
         />
       </a>
