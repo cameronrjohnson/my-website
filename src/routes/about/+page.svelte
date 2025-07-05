@@ -8,13 +8,13 @@
   const events = [
     {
       title: 'Beginning',
-      message: `My journey into the world of programming began with the creation of my first company, Resolution Prototyping. I took on the challenge 
+      message: `My journey into the world of programming began with the creation of several little websites. I took on the challenge 
                 of building a website from scratch using WordPress, while also integrating some JavaScript to enhance functionality. This initial 
-                venture was not only a significant achievement but also ignited a profound passion for programming within me. The success of the company 
-                encouraged me to dive deeper into the field, and I found myself eager to explore every facet of programming. Remarkably, Resolution Prototyping 
-                continues to thrive to this day.`,
+                venture was not only a significant achievement but also ignited a profound passion for programming within me. The success of these websites 
+                encouraged me to dive deeper into the field, and I found myself eager to explore every facet of programming. I soon after took as a job as a 
+                web developer for a small startup called Resolution Prototyping.`,
       image: `${base}/images/timeline-photos/Res_Square.jpeg`,
-      date: 'Jan. 2019 - Feb. 2020'
+      date: 'Dec. 2019 - Feb. 2020'
     },
     {
       title: 'Mobile Dev.',
@@ -24,7 +24,7 @@
                 a need that became particularly relevant during the pandemic. This project deepened my appreciation for mobile development and further fueled my desire 
                 to learn more.`,
       image: `${base}/images/timeline-photos/Flutter_Square.jpeg`,
-      date: 'Feb. 2020 - Aug. 2020'
+      date: 'Feb. 2020 - Nov. 2021'
     },
     {
       title: 'Game Dev.',
