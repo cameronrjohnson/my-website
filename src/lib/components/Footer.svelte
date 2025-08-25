@@ -5,7 +5,7 @@
     
     <!-- Social Links -->
     <div class="flex space-x-3">
-      <a href="https://github.com/CameronRJohnson" target="_blank" class="hover:underline text-lg">GitHub</a>
+      <a href="https://github.com/cameronrjohnson" target="_blank" class="hover:underline text-lg">GitHub</a>
       <a href="https://www.linkedin.com/in/cameron-johnson-b13b54200/" target="_blank" class="hover:underline text-lg">LinkedIn</a>
       <a href="https://www.instagram.com/cameron.__.j/?hl=en" target="_blank" class="hover:underline text-lg">Instagram</a>
     </div>
