@@ -7,6 +7,10 @@
   let formattedTime: string = '—';
   let loading: boolean = true;
   let error: string | null = null;
+  function toEven(num: number | null): number | string {
+    if (num === null) return '—';
+    return Math.round(num / 2) * 2;
+  }
 
   function formatTimestamp(ts: string | null): string {
     if (!ts) return 'Unknown';
@@ -73,16 +77,16 @@
     {#if error}
       <p class="text-lg text-red-600 dark:text-red-400">Error: {error}</p>
     {:else}
-      <div class="dark:bg-gray-800 shadow-2xl rounded-xl p-8 w-full max-w-lg">
+      <div class="dark:bg-gray-800 shadow-2xl rounded-xl p-12 w-full max-w-xl">
         <div class="flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0 md:space-x-8">
           <div class="text-center md:text-left">
             <p class="text-xl font-semibold text-white-800 dark:text-white-100">Temperature</p>
-            <p class="text-5xl font-bold text-blue-600 dark:text-blue-400">{temperature ?? '—'} °F</p>
+            <p class="text-5xl font-bold text-blue-600 dark:text-blue-400">{toEven(temperature)} °F</p>
           </div>
 
           <div class="text-center md:text-right">
             <p class="text-xl font-semibold text-white-800 dark:text-white-100">Humidity</p>
-            <p class="text-5xl font-bold text-green-600 dark:text-green-400">{humidity ?? '—'} %</p>
+            <p class="text-5xl font-bold text-green-600 dark:text-green-400">{toEven(humidity)} %</p>
           </div>
         </div>
 
