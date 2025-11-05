@@ -7,7 +7,6 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="color-scheme" content="dark light" />
-    <!-- Tailwind CSS CDN (if not using a build process) -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 
@@ -29,6 +28,7 @@
                     <li class="mr-5"><a href="{base}/about" class="text-lg ">My Story</a></li>
                     <li class="mr-5"><a href="{base}/portfolio" class="text-lg ">Experience</a></li>
                     <li><a href="{base}/contact" class="text-lg ">Contact Me</a></li>
+                    <li><a href="{base}/frog" class="text-lg ">Frog Terrarium</a></li>
                 </ul>
             </nav>
         </div>

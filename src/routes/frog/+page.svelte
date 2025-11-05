@@ -8,11 +8,10 @@
   let loading: boolean = true;
   let error: string | null = null;
 
-  // Format created_at into a human readable string
   function formatTimestamp(ts: string | null): string {
     if (!ts) return 'Unknown';
     const d = new Date(ts);
-    if (isNaN(d.getTime())) return ts; // fallback to raw value if parsing fails
+    if (isNaN(d.getTime())) return ts;
     return d.toLocaleString();
   }
 
