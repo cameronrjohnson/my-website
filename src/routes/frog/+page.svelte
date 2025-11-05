@@ -81,12 +81,12 @@
         <div class="flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0 md:space-x-8">
           <div class="text-center md:text-left">
             <p class="text-xl font-semibold text-white-800 dark:text-white-100">Temperature</p>
-            <p class="text-5xl font-bold text-blue-600 dark:text-blue-400">{toEven(temperature)} °F</p>
+            <p class="text-5xl font-bold text-blue-600 dark:text-blue-400">{toEven(temperature)}°F</p>
           </div>
 
           <div class="text-center md:text-right">
             <p class="text-xl font-semibold text-white-800 dark:text-white-100">Humidity</p>
-            <p class="text-5xl font-bold text-green-600 dark:text-green-400">{toEven(humidity)} %</p>
+            <p class="text-5xl font-bold text-green-600 dark:text-green-400">{toEven(humidity)}%</p>
           </div>
         </div>
 
