@@ -27,7 +27,7 @@
                 <ul class="list-none flex p-0 m-0 flex-col md:flex-row">
                     <li class="mr-5"><a href="{base}/about" class="text-lg ">My Story</a></li>
                     <li class="mr-5"><a href="{base}/portfolio" class="text-lg ">Experience</a></li>
-                    <li class="mr-5"><a href="{base}/frog" class="text-lg ">Frog Terrarium</a></li>
+                    <li class="mr-5"><a href="{base}/frog" class="text-lg ">Terrarium</a></li>
                     <li><a href="{base}/contact" class="text-lg ">Contact Me</a></li>
                 </ul>
             </nav>
